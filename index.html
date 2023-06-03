@@ -16,11 +16,8 @@
     <meta property="og:image:alt" content="A description of what is in the image (not a caption)">
     <meta property="og:description" content="Description Here">
     <meta property="og:site_name" content="Site Name">
-    <meta
-  name="description"
-  content="Mary's simple recipe for maple bacon donuts
-           makes a sticky, sweet treat with just a hint
-           of salt that you'll keep coming back for.">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="">
     <title>Document</title>
 
 
@@ -42,16 +39,16 @@
         <div class="hidden w-full md:flex md:w-auto md:items-center" id="menu">
             <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
                 <li>
-                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Read Features</a>
+                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Features</a>
                 </li>
                 <li>
-                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Read Pricing</a>
+                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Pricing</a>
                 </li>
                 <li>
-                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Read Customers</a>
+                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold" href="google.com">Customers</a>
                 </li>
                 <li>
-                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold " href="google.com">Read Blog</a>
+                    <a class="block py-2 hover:text-purple-400 md:p-4 font-semibold " href="google.com">Blog</a>
                 </li>
                 <li>
                     <a class="block py-2 text-purple-500 hover:text-purple-400 md:p-4 font-semibold"
@@ -125,35 +122,44 @@
 
             <div class="flex items-center justify-center w-full h-full button">
 
-                <p class="relative inline-block text-lg group px-4">20🥂 <br> Libra♎ <br> YouTube🎥 <br> </p>
+                <p id="p1" class="relative inline-block text-lg group px-4">20🥂 <br> Libra♎ <br> YouTube🎥 <br> </p>
 
 
             </div>
-            <div
-                class="absolute bottom-0 flex items-center justify-center w-full py-2 font-medium text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 ">
-                <span>Copy</span>
-                <div id="code-0" class="hidden code">'The only thing that matters the most is your happiness.'
-                </div>
-            </div>
+            <div class="copybutton absolute bottom-0 flex items-center justify-center w-full py-2 font-medium text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 "
+                data-clipboard-target="#p1">Copy</div>
         </div>
-
+        <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var clipboard = new ClipboardJS('.copybutton');
+                $(".copybutton").click(function () {
+                    $(this).html('Copied!!');
+                    var that = $(this);
+                    var intrvrl = setInterval(function () {
+                        that.html('Copy');
+                        clearInterval(intrvrl);
+                    },
+                        1000);
+                });
+            });
+        </script>
 
         <div
             class="relative flex flex-col col-span-4 sm:col-span-2 lg:col-span-1 items-center justify-center bg-white w-full pt-16 pb-24 border border-gray-200 rounded-lg overflow-hidden">
 
             <div class="flex items-center justify-center w-full h-full button">
 
-                <p class="relative inline-block text-lg group px-4">𝐊𝐫𝐮𝐭𝐢 𝐑𝐚𝐧𝐚❤⚡ <br> 𝙵𝚘𝚕𝚕𝚘𝚠 𝚢𝚘𝚞𝚛
+                <p id="p2" class="relative inline-block text-lg group px-4">𝐊𝐫𝐮𝐭𝐢 𝐑𝐚𝐧𝐚❤⚡ <br> 𝙵𝚘𝚕𝚕𝚘𝚠
+                    𝚢𝚘𝚞𝚛
                     𝚑𝚎𝚊𝚛𝚝🤍🦋 <br> 👇 Check out my latest post
                     👇 </p>
 
 
             </div>
-            <div
-                class="absolute bottom-0 flex items-center justify-center w-full py-2 font-medium  text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 ">
-                <span>Copy</span>
-                <div id="code-0" class="hidden code">'The only thing that matters the most is your happiness.'
-                </div>
+            <div class="copybutton absolute bottom-0 flex items-center justify-center w-full py-2 font-medium  text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 "
+                data-clipboard-target="#p2">Copy
             </div>
         </div>
 
@@ -162,17 +168,16 @@
 
             <div class="flex items-center justify-center w-full h-full button">
 
-                <p class="relative inline-block text-lg group px-4">Actor / fashion designer/ Model / Home cook /
+                <p id="p3" class="relative inline-block text-lg group px-4">Actor / fashion designer/ Model / Home cook
+                    /
                     painter 💓☕️✨🦄🦋 <br> 📍- India/New Delhi <br>
                     contact : YOUR@gmail.com <br> 👇 Check out my latest post 👇 </p>
 
 
             </div>
-            <div
-                class="absolute bottom-0 flex items-center justify-center w-full py-2 font-medium  text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 ">
-                <span>Copy</span>
-                <div id="code-0" class="hidden code">'The only thing that matters the most is your happiness.'
-                </div>
+            <div class="copybutton absolute bottom-0 flex items-center justify-center w-full py-2 font-medium  text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500 "
+                data-clipboard-target="#p3">Copy
+
             </div>
         </div>
         <div
